@@ -1,6 +1,19 @@
+jQuery.datetimepicker.setLocale('nl');
 $(function () {
     $("#id_date").datetimepicker({
-
+        i18n:{
+     de:{
+      months:[
+       'Januari','Februari','Maart','April',
+       'Mei','Juni','Juli','Augustus',
+       'September','Oktober','November','December',
+      ],
+      dayOfWeek:[
+       "Zo.", "Mo", "Di", "Moe",
+       "Do", "Fr", "Za.",
+      ]
+     }
+    },
       format: 'd/m/Y H:i',
       // inline:true,
       // datetimepicker:false,
@@ -11,7 +24,3 @@ $(function () {
          ]
     });
   });
- // $("#id_date").on('click',function(e){
- //     var data = $(this).val();
- //    console.log("data",data);
- // })
