@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}tutors | {{block.super}}{% endblock %}
+
+{% block content %}
+<h4>Our Tutors</h4>
+    {% for tutor in object_list %}
+        <p><a href="{{tutor.get_absolute_url}}">{{tutor}}</a></p>
+    {% endfor %}
+{% endblock %}

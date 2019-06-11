@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+        <h5>Detail about {{tutor}}</h5>
+        <p>Vak: {{tutor.vak}}</p>
+        <h5>Make an appointment with this tutor</h5>
+        <p>Choose the date and convenient </p>
+        <form  action="" method="post">
+            {% csrf_token %}
+            {{form.date}}
+        </form>
+
+    {% endblock %}
