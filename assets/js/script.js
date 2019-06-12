@@ -35,7 +35,7 @@ $(function () {
   });
   $("#app").on('submit',function(e){
       e.preventDefault();
-      console.log("form submited");
+      // console.log("form submited");
       var url = $(this).attr("action");
       // var data = $("#id_date").val();
       $.ajax({
@@ -43,7 +43,7 @@ $(function () {
           data:$(this).serialize(),
           type:$(this).attr('method'),
           success:function(resp){
-              console.log('till success');
+              console.log('resp sent');
           },
           error:function(err){
               console.log("err",err);

@@ -8,8 +8,17 @@
         <p>Choose the date and convenient </p>
         <form id="app" action="{% url 'staff:tutor-detail' tutor.id  %}" method="post">
             {% csrf_token %}
+            <input type="hidden" name="tutor" value="{{user.id}}">
             {% bootstrap_form form%}
-            <button type="submit">Appoint</button>
+            <button type="submit" class="btn btn-success">Appoint</button>
         </form>
+    <div class="">
+        <h5>Docent {{tutor}} has following appointments:</h5>
+        <ul>
+            {% for app in tutor.tut_app.all %}
+                <li>{{app}}</li>
+            {% endfor %}
+        </ul>
 
+    </div>
     {% endblock %}

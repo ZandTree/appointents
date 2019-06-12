@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 # Register your models here.
-from .models import User,Tutor,Student
+from .models import User,Tutor,Student,Appointment
 from .forms import CustomUserChangeForm ,CustomUserCreationForm
 
 class CustomUserAdmin(UserAdmin):
@@ -17,3 +17,4 @@ class CustomUserAdmin(UserAdmin):
 admin.site.register(User,CustomUserAdmin)
 admin.site.register(Tutor)
 admin.site.register(Student)
+admin.site.register(Appointment)
